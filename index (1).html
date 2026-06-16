@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biryani House Karachi</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #fffbeb; color: #1c1917; }
+  header { background: #92400e; color: white; padding: 20px; text-align: center; }
+  header h1 { font-size: 28px; margin-bottom: 6px; }
+  header p { font-size: 14px; opacity: 0.85; }
+  nav { background: #78350f; display: flex; justify-content: center; gap: 20px; padding: 12px; }
+  nav a { color: #fde68a; text-decoration: none; font-size: 14px; }
+  .hero { background: #fef3c7; padding: 40px 20px; text-align: center; border-bottom: 2px solid #fde68a; }
+  .hero h2 { font-size: 22px; color: #92400e; margin-bottom: 10px; }
+  .hero p { color: #78350f; font-size: 15px; }
+  .menu { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+  .menu h3 { font-size: 18px; color: #92400e; border-bottom: 2px solid #fde68a; padding-bottom: 8px; margin: 24px 0 14px; }
+  .item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #fef3c7; }
+  .item-price { font-weight: bold; color: #92400e; }
+  .info-bar { background: #92400e; color: white; text-align: center; padding: 16px; margin-top: 30px; font-size: 14px; line-height: 1.8; }
+  footer { text-align: center; padding: 16px; background: #78350f; color: #fde68a; font-size: 13px; }
+  #cb-btn { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: #92400e; border-radius: 50%; border: none; cursor: pointer; font-size: 24px; color: white; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+  #cb-box { position: fixed; bottom: 86px; right: 20px; width: 300px; background: white; border: 1px solid #ddd; border-radius: 12px; overflow: hidden; display: none; z-index: 999; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+  #cb-head { background: #92400e; color: white; padding: 12px 16px; font-size: 14px; font-weight: bold; }
+  #cb-msgs { height: 260px; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .cb-bot { background: #fef3c7; padding: 8px 12px; border-radius: 12px 12px 12px 4px; font-size: 13px; max-width: 85%; line-height: 1.5; }
+  .cb-user { background: #92400e; color: white; padding: 8px 12px; border-radius: 12px 12px 4px 12px; font-size: 13px; max-width: 85%; align-self: flex-end; }
+  #cb-inp { display: flex; border-top: 1px solid #eee; padding: 8px; }
+  #cb-inp input { flex: 1; border: 1px solid #ddd; border-radius: 20px; padding: 6px 12px; font-size: 13px; outline: none; }
+  #cb-inp button { background: #92400e; color: white; border: none; border-radius: 20px; padding: 6px 14px; margin-left: 6px; cursor: pointer; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🍛 Biryani House</h1>
+  <p>Karachi ka Mashoor Biryani — Clifton Branch</p>
+</header>
+<nav>
+  <a href="#">Menu</a>
+  <a href="#">Delivery</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+<div class="hero">
+  <h2>Authentic Pakistani Biryani Since 1995</h2>
+  <p>Dum pukht tareeqe se bani, masalon ki khushbu se bhari</p>
+</div>
+<div class="menu">
+  <h3>Biryani</h3>
+  <div class="item"><span>Chicken Biryani (Full)</span><span class="item-price">Rs. 950</span></div>
+  <div class="item"><span>Chicken Biryani (Half)</span><span class="item-price">Rs. 550</span></div>
+  <div class="item"><span>Mutton Biryani (Full)</span><span class="item-price">Rs. 1,400</span></div>
+  <div class="item"><span>Beef Biryani (Full)</span><span class="item-price">Rs. 1,100</span></div>
+  <div class="item"><span>Prawn Biryani (Full)</span><span class="item-price">Rs. 1,600</span></div>
+  <h3>Sides</h3>
+  <div class="item"><span>Raita</span><span class="item-price">Rs. 80</span></div>
+  <div class="item"><span>Salad</span><span class="item-price">Rs. 100</span></div>
+  <div class="item"><span>Cold Drink</span><span class="item-price">Rs. 80</span></div>
+  <h3>Family Deals</h3>
+  <div class="item"><span>Family Pack (2 Full + Raita + 4 Drinks)</span><span class="item-price">Rs. 2,400</span></div>
+  <div class="item"><span>Office Pack (3 Full + Raita + 6 Drinks)</span><span class="item-price">Rs. 3,200</span></div>
+</div>
+<div class="info-bar">
+  📍 Block 7, Clifton, Karachi &nbsp;|&nbsp; 📞 021-3456-7890 &nbsp;|&nbsp; ⏰ Mon–Sun: 12pm – 11pm<br>
+  🛵 Home Delivery Available via Foodpanda & Direct Riders
+</div>
+<footer>© 2025 Biryani House Karachi. Shukriya!</footer>
+
+<button id="cb-btn" onclick="toggleChat()">💬</button>
+<div id="cb-box">
+  <div id="cb-head">🍛 Biryani House — Assistant</div>
+  <div id="cb-msgs">
+    <div class="cb-bot">Assalam o Alaikum! Menu, delivery ya koi bhi sawal poochein!</div>
+  </div>
+  <div id="cb-inp">
+    <input type="text" id="cb-input" placeholder="Sawal likhein..." onkeydown="if(event.key==='Enter')cbSend()"/>
+    <button onclick="cbSend()">▶</button>
+  </div>
+</div>
+
+<script>
+const msgs = [];
+function toggleChat() {
+  const b = document.getElementById('cb-box');
+  b.style.display = b.style.display === 'none' ? 'block' : 'none';
+}
+async function cbSend() {
+  const inp = document.getElementById('cb-input');
+  const txt = inp.value.trim();
+  if (!txt) return;
+  inp.value = '';
+  addMsg('user', txt);
+  msgs.push({ role: 'user', content: txt });
+  addMsg('bot', '...');
+  try {
+    const res = await fetch('/.netlify/functions/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: msgs })
+    });
+    const d = await res.json();
+    document.getElementById('cb-msgs').lastChild.remove();
+    addMsg('bot', d.reply);
+    msgs.push({ role: 'assistant', content: d.reply });
+  } catch (e) {
+    document.getElementById('cb-msgs').lastChild.remove();
+    addMsg('bot', 'Maafi, dobara try karein.');
+  }
+}
+function addMsg(r, t) {
+  const d = document.getElementById('cb-msgs');
+  const p = document.createElement('div');
+  p.className = r === 'user' ? 'cb-user' : 'cb-bot';
+  p.textContent = t;
+  d.appendChild(p);
+  d.scrollTop = d.scrollHeight;
+}
+</script>
+</body>
+</html>
